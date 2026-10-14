@@ -1,0 +1,2 @@
+/* Fixed across every app. */
+:root { --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:32px; --fs-micro:10px; --fs-small:11px; --fs-body:12px; --radius-1:4px; --radius-2:6px; --sidebar-w:224px; --header-h:76px; --content-max:1500px; }

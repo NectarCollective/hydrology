@@ -1,0 +1,5 @@
+:root{color-scheme:dark;--bg:#060d18;--panel:#0d1a2b;--line:#1c3350;--accent:#2fa8ff;--accent-2:#22d3ee;--text:#e6f2ff;--muted:#8aa4c0;--font-display:'Barlow Condensed',sans-serif;--font-body:Inter,system-ui,sans-serif}
+body{background:radial-gradient(1200px 600px at 70% -10%,#0b2a4a 0%,var(--bg) 60%)}
+svg.cycle{background:linear-gradient(#0a1f36,#060d18)!important}
+.next{background:linear-gradient(90deg,#0a3d6b,#0e5a8f)!important}
+.btn{box-shadow:0 0 24px #2fa8ff55}
