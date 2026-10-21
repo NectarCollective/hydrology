@@ -2,7 +2,7 @@
 <div class="nav"><a class="logo" href="index.html">Hydro<b>logy</b></a><nav><a href="index.html#topics">Topics</a></nav></div>
 <article><span class="eyebrow">Topic 02</span><h1>Watersheds</h1><p class="lead">Every drop of rain belongs to a watershed.</p>
 <p><button class="btn" type="button" id="zoom" style="border:0;cursor:pointer">Zoom out to the Mississippi basin</button></p>
-<svg class="cycle" id="ws-creek" viewBox="0 0 720 300" font-family="Inter,sans-serif" font-size="15" font-weight="600">
+<svg class="cycle" id="ws-creek" role="img" aria-label="Creek basin map: a ridgeline divide surrounds the basin, and rain drops flow downhill along streams to one outlet" viewBox="0 0 720 300" font-family="Inter,sans-serif" font-size="15" font-weight="600">
 <path d="M60 150 C120 40 300 20 380 40 C500 20 660 60 680 150 C660 240 500 280 380 270 C260 285 100 250 60 150Z" fill="#123a2e"/>
 <path d="M110 150 C160 80 300 70 380 80 C480 70 600 100 630 150 C600 205 480 230 380 225 C280 232 160 215 110 150Z" fill="none" stroke="#2c6b52" stroke-width="2"/>
 <path d="M170 150 C210 115 300 110 380 115 C460 110 540 125 570 150 C540 180 460 192 380 190 C300 194 210 182 170 150Z" fill="none" stroke="#3f8f6d" stroke-width="2"/>
@@ -11,7 +11,7 @@
 <path class="flow" d="M150 90 C220 130 300 150 380 160" stroke="#7fd3ff" stroke-width="3" fill="none"/><path class="flow" d="M600 80 C540 120 460 150 380 160" stroke="#7fd3ff" stroke-width="3" fill="none"/><path class="flow" d="M200 230 C260 200 320 175 380 160" stroke="#7fd3ff" stroke-width="3" fill="none"/><path class="flow" d="M380 160 L380 268" stroke="#7fd3ff" stroke-width="3" fill="none"/>
 <circle cx="150" cy="90" r="5" fill="#e6f2ff"/><circle cx="600" cy="80" r="5" fill="#e6f2ff"/><circle cx="200" cy="230" r="5" fill="#e6f2ff"/><text x="110" y="78" fill="#e6f2ff">Rain</text>
 <circle cx="380" cy="270" r="8" fill="#2fa8ff" stroke="#fff" stroke-width="2"/><text x="395" y="290" fill="#e6f2ff">Outlet</text><text x="80" y="290" fill="#e6f2ff">Creek basin</text></svg>
-<svg class="cycle" id="ws-big" style="display:none" viewBox="0 0 720 300" font-family="Inter,sans-serif" font-size="15" font-weight="600">
+<svg class="cycle" id="ws-big" role="img" aria-label="Mississippi basin map: the Missouri and Ohio rivers join the Mississippi, which drains to the Gulf of Mexico; a small creek basin sits inside it" style="display:none" viewBox="0 0 720 300" font-family="Inter,sans-serif" font-size="15" font-weight="600">
 <path d="M80 60 L250 30 L420 25 L560 50 L600 110 L560 170 L470 210 L430 270 L370 280 L330 220 L230 190 L120 150Z" fill="#123a2e" stroke="#ffd166" stroke-width="4"/><text x="250" y="20" fill="#e6f2ff">Mississippi basin divide</text>
 <path d="M140 80 C220 110 300 140 370 190" stroke="#2fa8ff" stroke-width="3" fill="none"/><text x="150" y="110" fill="#e6f2ff">Missouri</text>
 <path d="M550 120 C480 150 420 170 370 190" stroke="#2fa8ff" stroke-width="3" fill="none"/><text x="470" y="140" fill="#e6f2ff">Ohio</text>
@@ -23,11 +23,11 @@
 <li><b>Ridges are the borders.</b> The high ground between two valleys is the divide. Rain on one side flows one way, and rain on the other side flows the other way.</li>
 <li><b>The outlet is the drain.</b> Everything inside the borders eventually funnels to one low point.</li>
 <li><b>They nest.</b> A small creek's watershed sits inside a bigger river's watershed, which sits inside an even bigger one.</li></ol>
-<h2>What shapes the flow</h2><div class="stat"><div><b>Slope</b>Steep land sheds water fast. Flat land holds it longer.</div><div><b>Soil</b>Sand soaks water up. Clay and rock send it running off.</div><div><b>Cover</b>Forests and wetlands slow water. Pavement speeds it up.</div></div>
+<h2>What shapes the flow</h2><div class="stat"><div><b>Slope</b>Steep land sheds water fast. Flat land holds it longer.</div><div><b>Soil</b>Sand soaks water up. Clay and rock send it running off.</div><div><b>Cover</b>Forests and wetlands slow water down like a sponge. Pavement and roofs speed it up.</div></div>
 <p><b>Size and shape.</b> Big, round basins collect water from everywhere at once, which can mean sharper flood peaks.</p>
 <h2>Why it matters</h2><p>Whatever happens on the land ends up in the water: fertilizer from farms, oil from streets, sediment from construction. That's why watersheds are the natural unit for managing floods, drinking water, and pollution, and why a city upstream can change a river for everyone downstream.</p>
 <p><b>Try it:</b> Look up your address on the <a href="https://streamstats.usgs.gov/ss/">USGS StreamStats map</a> to see the watershed you live in.</p>
-<a class="next" href="streamflow.html"><span class="eyebrow" style="color:#7fd3ff">Next up · after you finish this one</span><br><b style="font:600 24px var(--font-display);text-transform:uppercase">Streamflow &amp; Floods</b></a>
+<a class="next" href="streamflow.html"><span class="eyebrow" style="color:#7fd3ff">Next up · after you finish this one</span><br><b style="font:600 24px var(--font-display);text-transform:uppercase">Streamflow &amp; Floods</b><br>What happens when all that water reaches the river.</a>
 <p><a href="water-cycle.html">← Previous: The Water Cycle</a></p>
 </article>
 <script>var z=document.getElementById('zoom'),a=document.getElementById('ws-creek'),b=document.getElementById('ws-big');z.onclick=function(){var big=b.style.display=="none";b.style.display=big?"":"none";a.style.display=big?"none":"";z.textContent=big?'Zoom in to the creek basin':'Zoom out to the Mississippi basin';};</script>
