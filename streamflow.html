@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Streamflow &amp; Floods · Hydrology</title><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="site.css"></head><body>
+<div class="nav"><a class="logo" href="index.html">Hydro<b>logy</b></a><nav><a href="index.html#topics">Topics</a></nav></div>
+<article><span class="eyebrow">Topic 03</span><h1>Streamflow &amp; Floods</h1><p class="lead">A river is a moving record of everything that happened upstream.</p>
+<p><button class="btn" type="button" id="land" style="border:0;cursor:pointer">Switch to city</button></p>
+<svg class="cycle" viewBox="0 0 720 300" font-family="Inter,sans-serif" font-size="15" font-weight="600">
+<ellipse cx="150" cy="40" rx="70" ry="24" fill="#1e3a5c" stroke="#1c3350"/><text x="115" y="45" fill="#e6f2ff">Storm</text>
+<path class="flow" d="M120 66 L120 100" stroke="#2fa8ff" stroke-width="3" fill="none"/><path class="flow" d="M150 66 L150 108" stroke="#2fa8ff" stroke-width="3" fill="none"/><path class="flow" d="M180 66 L180 100" stroke="#2fa8ff" stroke-width="3" fill="none"/>
+<rect x="110" y="110" width="80" height="6" fill="#2fa8ff"/><text x="200" y="118" fill="#e6f2ff">Heaviest rain</text>
+<line x1="60" y1="270" x2="690" y2="270" stroke="#5b7384" stroke-width="2"/><line x1="60" y1="130" x2="60" y2="270" stroke="#5b7384" stroke-width="2"/>
+<text x="600" y="290" fill="#e6f2ff">Time →</text><text x="66" y="145" fill="#e6f2ff">Flow (cfs)</text>
+<line x1="60" y1="250" x2="690" y2="250" stroke="#6b4f2a" stroke-dasharray="4 6" stroke-width="2"/><text x="560" y="244" fill="#e6f2ff">Baseflow</text>
+<path id="hy" class="flow" d="M60 250 L160 250 C240 248 290 205 330 185 C380 165 420 200 480 225 C540 242 600 248 690 250" stroke="#22d3ee" stroke-width="4" fill="none"/>
+<line id="lag" x1="150" y1="122" x2="350" y2="122" stroke="#e6f2ff" stroke-width="2"/><text id="lagt" x="230" y="140" fill="#e6f2ff">Lag time</text>
+<text id="pk" x="320" y="175" fill="#e6f2ff">Peak</text><text x="190" y="215" fill="#e6f2ff">Rising limb</text><text x="470" y="210" fill="#e6f2ff">Falling limb</text>
+<text id="mode" x="560" y="40" fill="#e6f2ff">Forest watershed</text></svg>
+<p>Streamflow (or discharge) is how much water passes a point in a river each second. In the US it's measured in cubic feet per second, or cfs. One cfs is about 7.5 gallons every second.</p>
+<h2>How it's measured</h2><p>Thousands of stream gauges track the water level, called stage, every few minutes. Hydrologists measure the flow by hand at different levels, then build a rating curve that turns stage into flow. That's how a gauge reports live discharge.</p>
+<h2>Baseflow vs. stormflow</h2><div class="stat" style="grid-template-columns:repeat(2,1fr)"><div><b>Baseflow</b>The steady water that keeps rivers running between storms, mostly seeping in from groundwater.</div><div><b>Stormflow</b>The quick surge after rain or snowmelt, from runoff and shallow soil water.</div></div>
+<h2>Reading a hydrograph</h2><p>A hydrograph is a graph of flow over time.</p><ol class="steps">
+<li><b>Rising limb.</b> Rain reaches the river and flow climbs.</li>
+<li><b>Peak.</b> The highest flow, often hours or days after the heaviest rain. That delay is the lag time.</li>
+<li><b>Falling limb.</b> Flow drops back toward baseflow as the watershed drains.</li></ol>
+<p>Small, steep, or paved watersheds have short lag times and sharp peaks. Big, flat, or forested ones respond slower and gentler.</p>
+<h2>What causes floods</h2><ol class="steps">
+<li><b>Heavy or long rain</b> that falls faster than the ground can absorb it.</li>
+<li><b>Rain on snow,</b> which adds snowmelt to the rain.</li>
+<li><b>Saturated or frozen ground,</b> so nothing soaks in.</li>
+<li><b>Pavement and storm drains,</b> which rush water into streams.</li>
+<li><b>Flash floods</b> come from intense rain over small, steep areas and can rise in minutes.</li></ol>
+<h2>The "100-year flood"</h2><div class="stat"><div><b>1%</b>Chance in any given year</div><div><b>Not</b>once a century</div><div><b>~26%</b>Chance over a 30-year mortgage</div></div>
+<h2>Why it matters</h2><p>Streamflow drives flood warnings, tells cities and farms how much water they'll have, and shows how healthy a river is for fish.</p>
+<p><b>Try it:</b> Check a river near you on the <a href="https://waterdata.usgs.gov/">USGS Water Data</a> map.</p>
+<div class="next" style="opacity:.6"><span class="eyebrow" style="color:#7fd3ff">Next up · coming soon</span><br><b style="font:600 24px var(--font-display);text-transform:uppercase">Groundwater</b></div>
+<p><a href="watersheds.html">← Previous: Watersheds</a></p>
+</article>
+<script>var c=false,btn=document.getElementById('land'),hy=document.getElementById('hy'),F='M60 250 L160 250 C240 248 290 205 330 185 C380 165 420 200 480 225 C540 242 600 248 690 250',C='M60 250 L160 250 C190 245 210 150 230 140 C250 135 270 200 330 235 C420 250 600 250 690 250';
+btn.onclick=function(){c=!c;hy.setAttribute('d',c?C:F);document.getElementById('lag').setAttribute('x2',c?230:350);document.getElementById('pk').setAttribute('x',c?215:320);document.getElementById('pk').setAttribute('y',c?132:175);document.getElementById('lagt').setAttribute('x',c?165:230);document.getElementById('mode').textContent=c?'City watershed':'Forest watershed';btn.textContent=c?'Switch to forest':'Switch to city';};</script>
+</body></html>
